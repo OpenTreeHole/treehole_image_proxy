@@ -1,0 +1,8 @@
+.idea
+.vscode
+*.env
+*.exe
+*.db
+*.ps1
+*.log
+*.out
