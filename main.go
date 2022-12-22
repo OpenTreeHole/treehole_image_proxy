@@ -13,7 +13,7 @@ import (
 func main() {
 	app := fiber.New()
 	app.Use(recover.New(recover.Config{EnableStackTrace: true}))
-	app.Use(logger.New(logger.Config{TimeZone: "Asia/Shanghai"}))
+	app.Use(logger.New())
 	router := app.Group("/api")
 	router.Get("/upload", GetAuthToken)
 	router.Post("/json", UploadImage)

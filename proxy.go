@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"io"
+	"log"
 	"mime/multipart"
 	"net/url"
 	"path/filepath"
@@ -62,6 +63,7 @@ func ProxyUploadImage(file *multipart.FileHeader, response *CheveretoUploadRespo
 			urlData.Host = ProxyUrlData.Host
 			urlData.Scheme = ProxyUrlData.Scheme
 			directUrl := urlData.String()
+			log.Printf("image upload: %v\n", directUrl)
 
 			response.StatusCode = 200
 			response.StatusTxt = "Upload Success"

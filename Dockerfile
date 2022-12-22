@@ -15,6 +15,10 @@ RUN go build -tags="release" -ldflags "-s -w" -o image_proxy
 
 FROM alpine
 
+RUN apk add --no-cache tzdata
+
+ENV TZ=Asia/Shanghai
+
 WORKDIR /app
 
 COPY --from=builder /app/image_proxy /app/
