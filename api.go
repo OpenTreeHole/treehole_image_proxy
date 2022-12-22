@@ -3,7 +3,7 @@ package main
 import "github.com/gofiber/fiber/v2"
 
 func GetAuthToken(c *fiber.Ctx) error {
-	return c.SendString("PF.obj.config.auth_token = 123456789")
+	return c.SendString("PF.obj.config.auth_token = \"123456789\"")
 }
 
 func UploadImage(c *fiber.Ctx) error {
