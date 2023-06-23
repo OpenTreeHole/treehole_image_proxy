@@ -60,7 +60,11 @@ func ProxyUploadImage(file *multipart.FileHeader, response *CheveretoUploadRespo
 			if err != nil {
 				return err
 			}
-			urlData.Host = ProxyUrlData.Host
+			if Config.HostRewrite != "" {
+				urlData.Host = Config.HostRewrite
+			} else {
+				urlData.Host = ProxyUrlData.Host
+			}
 			urlData.Scheme = ProxyUrlData.Scheme
 			directUrl := urlData.String()
 			log.Printf("image upload: %v\n", directUrl)

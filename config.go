@@ -14,6 +14,7 @@ var Config struct {
 	ProxyUsername string `env:"PROXY_USERNAME"`
 	ProxyPassword string `env:"PROXY_PASSWORD,required"`
 	ProxyEmail    string `env:"PROXY_EMAIL"`
+	HostRewrite   string `env:"HOST_REWRITE"`
 	Token         string `env:"TOKEN"`
 }
 
