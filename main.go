@@ -1,9 +1,10 @@
 package main
 
 import (
+	"github.com/goccy/go-json"
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/recover"
+	"github.com/opentreehole/go-common"
 	"log"
 	"os"
 	"os/signal"
@@ -11,9 +12,18 @@ import (
 )
 
 func main() {
-	app := fiber.New()
-	app.Use(recover.New(recover.Config{EnableStackTrace: true}))
-	app.Use(logger.New())
+	app := fiber.New(fiber.Config{
+		ErrorHandler:          common.ErrorHandler,
+		JSONEncoder:           json.Marshal,
+		JSONDecoder:           json.Unmarshal,
+		DisableStartupMessage: true,
+		BodyLimit:             128 * 1024 * 1024,
+	})
+	app.Use(recover.New(recover.Config{
+		EnableStackTrace:  true,
+		StackTraceHandler: common.StackTraceHandler,
+	}))
+	app.Use(common.MiddlewareCustomLogger)
 	router := app.Group("/api")
 	router.Get("/upload", GetAuthToken)
 	router.Post("/json", UploadImage)

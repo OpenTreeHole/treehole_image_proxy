@@ -1,4 +1,4 @@
-FROM golang:1.19-alpine as builder
+FROM golang:1.20-alpine as builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN apk add --no-cache --virtual .build-deps \
 
 COPY . .
 
-RUN go build -tags="release" -ldflags "-s -w" -o image_proxy
+RUN go build -ldflags "-s -w" -o image_proxy
 
 FROM alpine
 
