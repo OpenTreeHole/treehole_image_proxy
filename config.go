@@ -16,7 +16,6 @@ var Config struct {
 	ProxyEmail    string `env:"PROXY_EMAIL"`
 	HostRewrite   string `env:"HOST_REWRITE"`
 	Token         string `env:"TOKEN"`
-	HttpProxyUrl  string `env:"HTTP_PROXY_URL"`
 }
 
 var Token struct {
