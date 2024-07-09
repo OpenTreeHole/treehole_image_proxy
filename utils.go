@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
+	"github.com/valyala/fasthttp/fasthttpproxy"
 	"time"
 )
 
@@ -45,5 +46,6 @@ func LskyBaseAgent(agent *fiber.Agent, method string, path string) *fiber.Agent 
 	req := agent.Request()
 	req.Header.SetMethod(method)
 	req.SetRequestURI(Config.ProxyUrl + path)
+	agent.Dial = fasthttpproxy.FasthttpHTTPDialer(Config.HttpProxyUrl)
 	return agent
 }
