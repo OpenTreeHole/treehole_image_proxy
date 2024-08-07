@@ -42,8 +42,7 @@ github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWE
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
 github.com/mattn/go-runewidth v0.0.16 h1:E5ScNMtiwvlvB5paMFdw9p4kSQzbXFikJ5SQO6TULQc=
 github.com/mattn/go-runewidth v0.0.16/go.mod h1:Jdepj2loyihRzMpdS35Xk/zdY8IAYHsh153qUoGf23w=
-github.com/opentreehole/go-common v0.1.5 h1:+TAvDPr2iysxKk/b49YI+wpIAnbgvKR3ofh22rDaErw=
-github.com/opentreehole/go-common v0.1.5/go.mod h1:0Ob6KqJUg+/he80cC3OdSokx4U35f2kgdGk73rrjWFo=
+github.com/opentreehole/go-common v0.1.6 h1:EFoh1HUSTMZePhq7ibhHzlJ1v2TlWxB76To2JFhQPRs=
 github.com/opentreehole/go-common v0.1.6/go.mod h1:0Ob6KqJUg+/he80cC3OdSokx4U35f2kgdGk73rrjWFo=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
