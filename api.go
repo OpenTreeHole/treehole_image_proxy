@@ -2,7 +2,6 @@ package main
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/opentreehole/go-common"
 )
 
 func GetAuthToken(c *fiber.Ctx) error {
@@ -10,10 +9,6 @@ func GetAuthToken(c *fiber.Ctx) error {
 }
 
 func UploadImage(c *fiber.Ctx) error {
-	var _, err = common.GetUserID(c)
-	if err != nil {
-		return err
-	}
 	var response CheveretoUploadResponse
 	file, err := c.FormFile("source")
 	if err != nil {

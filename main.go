@@ -23,6 +23,7 @@ func main() {
 		EnableStackTrace:  true,
 		StackTraceHandler: common.StackTraceHandler,
 	}))
+	app.Use(common.MiddlewareGetUserID)
 	app.Use(common.MiddlewareCustomLogger)
 	router := app.Group("/api")
 	router.Get("/upload", GetAuthToken)
