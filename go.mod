@@ -6,7 +6,7 @@ require (
 	github.com/caarlos0/env/v9 v9.0.0
 	github.com/goccy/go-json v0.10.3
 	github.com/gofiber/fiber/v2 v2.52.5
-	github.com/opentreehole/go-common v0.1.5
+	github.com/opentreehole/go-common v0.1.6
 )
 
 require (
